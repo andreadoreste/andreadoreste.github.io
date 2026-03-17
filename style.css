@@ -1,0 +1,338 @@
+/* --------------------
+    General Styles
+-------------------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    color: #004f9e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --------------------
+    Header Styles
+-------------------- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    color: #e76f87; /* A light, readable pink */
+}
+
+nav ul li a:hover {
+    color: #d15d74; /* A slightly darker pink on hover for contrast */
+    text-decoration: none; /* Removed underline on hover to keep it clean */
+}
+
+/* --------------------
+    Main Content Styles
+-------------------- */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 0;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.profile-panel {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px; /* smaller spacing between photo and bio */
+    flex-wrap: wrap;
+}
+
+.photo {
+    flex: 0 0 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* space between photo and icons */
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons a img {
+    width: 30px; /* Sets a fixed width for the icons */
+    height: 30px; /* Sets a fixed height for the icons */
+    border-radius: 50%;
+    border: none;
+}
+
+.bio {
+    flex: 1;
+    max-width: 700px;
+}
+
+.bio p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.bio p a {
+    color: #e76f87; /* A light, readable pink */
+}
+
+.bio p a:hover {
+    color: #d15d74; /* A slightly darker pink on hover for contrast */
+}
+
+.section-wrapper {
+    margin-bottom: 40px; /* Adds spacing between the sections */
+}
+
+section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.3rem;
+    margin-top: 0; /* Removed top margin */
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+.publication-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Adds space between the cards */
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.publication-card p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.read-paper-btn, .read-news-btn {
+    display: inline-block;
+    background-color: #e76f87;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.read-paper-btn:hover, .read-news-btn:hover {
+    background-color: #d15d74;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.read-paper-btn .fa-solid, .read-news-btn .fa-solid {
+    margin-right: 8px;
+}
+
+
+/* --------------------
+    Awards & Grants Styles
+-------------------- */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.award-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.award-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between the icon and text */
+}
+
+.award-icon {
+    font-size: 3rem;
+    color: #e76f87; /* Matching the header pink */
+    margin-bottom: 15px;
+}
+
+.award-card h3 {
+    margin: 0; /* Remove default margin to control spacing with flexbox */
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.award-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.award-photo {
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* New class for the pink border */
+.pink-border {
+    border: 3px solid #e76f87;
+}
+
+
+/* --------------------
+    DBLP Link Styles
+-------------------- */
+.dblp-link {
+    color: #e76f87; /* A distinct color for the DBLP link */
+}
+
+.dblp-link:hover {
+    color: #d15d74; /* A slightly darker pink on hover for contrast */
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-top: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    .profile-panel {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px; /* Reduced gap for smaller screens */
+    }
+}
+
+/* --------------------
+    Teaching Styles
+-------------------- */
+.teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.teaching-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.teaching-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.teaching-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Space between the icon and text */
+}
+
+.teaching-icon {
+    font-size: 3rem;
+    color: #e76f87;
+    margin-bottom: 15px;
+}
+
+.teaching-card h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.teaching-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
